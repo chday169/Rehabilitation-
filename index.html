@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Rehabilitation 復健資訊分享園地，分享復健文章、簡報及個人經驗。">
+
+    <title>Rehabilitation｜復健資訊分享園地</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav-container">
+
+        <a class="logo" href="#home">
+            <span class="logo-icon">R</span>
+            <span>
+                <strong>Rehabilitation</strong>
+                <small>復健資訊分享園地</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="開啟選單">☰</button>
+
+        <nav id="mainNav">
+            <a href="#home">首頁</a>
+            <a href="#articles">PDF文章</a>
+            <!-- <a href="#videos">影音分享</a> -->
+            <a href="#presentations">PPT簡報</a>
+            <a href="#about">版主介紹</a>
+            <a href="#resources">外部資源</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- 首頁 -->
+    <section class="hero" id="home">
+        <div class="container">
+
+            <p class="eyebrow">INFORMATION · EXPERIENCE · SUPPORT</p>
+
+            <h1>復健資訊分享園地</h1>
+
+            <p class="hero-text">
+                分享復健相關知識、個人經驗、文章及學習資源。
+                希望為復健者及家屬提供一個方便查閱與交流的資訊平台。
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#articles" class="btn btn-light">
+                    瀏覽復健文章
+                </a>
+
+                <a href="#presentations" class="btn btn-outline">
+                    觀看簡報分享
+                </a>
+            </div>
+
+            <p class="hero-note">
+                非營利・公益分享・經驗交流
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- 網站內容統計 -->
+    <section class="statistics">
+        <div class="container stat-grid">
+
+            <div>
+                <strong id="pdfCount">0</strong>
+                <span>PDF文章</span>
+            </div>
+
+            <!--
+            <div>
+                <strong id="videoCount">0</strong>
+                <span>影音資料</span>
+            </div>
+            -->
+
+            <div>
+                <strong id="pptCount">0</strong>
+                <span>PPT簡報</span>
+            </div>
+
+            <div>
+                <strong>公益</strong>
+                <span>非營利分享</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PDF文章 -->
+    <section class="section container" id="articles">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">READ & LEARN</p>
+                <h2>PDF文章閱讀</h2>
+            </div>
+
+            <p>復健指南、生活照護及相關經驗整理。</p>
+        </div>
+
+        <div class="toolbar">
+
+            <input type="search"
+                   id="articleSearch"
+                   placeholder="搜尋文章名稱...">
+
+            <select id="articleCategory">
+                <option value="">全部分類</option>
+            </select>
+
+        </div>
+
+        <div class="card-grid" id="articleList"></div>
+
+        <p id="articleEmpty" hidden>
+            找不到符合條件的文章。
+        </p>
+
+    </section>
+
+
+    <!--
+    <section class="section section-light" id="videos">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">WATCH & SHARE</p>
+                    <h2>MP4影音分享</h2>
+                </div>
+
+                <p>復健相關影片及經驗分享。</p>
+            </div>
+
+            <div class="card-grid" id="videoList"></div>
+
+        </div>
+
+    </section>
+    -->
+
+
+    <!-- PPT簡報 -->
+    <section class="section container" id="presentations">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">SLIDES & PRESENTATIONS</p>
+                <h2>PPT簡報播放</h2>
+            </div>
+
+            <p>逐頁閱讀復健簡報資料。</p>
+        </div>
+
+        <div class="card-grid" id="presentationList"></div>
+
+    </section>
+
+
+    <!-- 版主介紹 -->
+    <section class="section about-section" id="about">
+
+        <div class="container about-content">
+
+            <div class="author-icon">復</div>
+
+            <div>
+                <p class="eyebrow">ABOUT THE AUTHOR</p>
+
+                <h2 id="authorName"></h2>
+
+                <p id="authorBio"></p>
+
+                <blockquote id="authorMotto"></blockquote>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 外部網站 -->
+    <section class="section container" id="resources">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">FURTHER INFORMATION</p>
+                <h2>外部參考資源</h2>
+            </div>
+        </div>
+
+        <div class="card-grid" id="resourceList"></div>
+
+    </section>
+
+
+    <!-- 免責聲明 -->
+    <section class="disclaimer">
+
+        <div class="container disclaimer-grid">
+
+            <div>
+                <h3>非營利宣告</h3>
+                <p id="nonProfitText"></p>
+            </div>
+
+            <div>
+                <h3>醫療免責聲明</h3>
+                <p id="medicalText"></p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- 頁尾 -->
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-left">
+            <span>
+                © <span id="year"></span>
+                Rehabilitation｜復健資訊分享園地
+            </span>
+
+            <p class="footer-note">
+                本站為個人經驗分享，非醫療建議、非廣告、無對價關係。
+                復健與醫療決策請遵從專業醫師評估。
+            </p>
+        </div>
+
+        <a href="#home">回到頁首 ↑</a>
+
+    </div>
+
+</footer>
+
+
+<!-- PDF檢視視窗 -->
+<dialog id="viewerDialog" class="viewer-dialog">
+
+    <div class="dialog-header">
+
+        <strong id="viewerTitle">內容檢視</strong>
+
+        <button id="closeViewer" aria-label="關閉">✕</button>
+
+    </div>
+
+    <div id="viewerContent" class="viewer-content"></div>
+
+</dialog>
+
+
+<!-- PPT播放視窗 -->
+<dialog id="slideDialog" class="slide-dialog">
+
+    <div class="dialog-header">
+
+        <strong id="slideTitle">簡報播放</strong>
+
+        <button id="closeSlides" aria-label="關閉">✕</button>
+
+    </div>
+
+    <div class="slide-stage">
+
+        <button id="prevSlide" aria-label="上一頁">❮</button>
+
+        <img id="slideImage" alt="簡報頁面">
+
+        <button id="nextSlide" aria-label="下一頁">❯</button>
+
+    </div>
+
+    <div class="slide-footer">
+
+        <span id="slideCaption"></span>
+
+        <span id="slideCounter"></span>
+
+    </div>
+
+</dialog>
+
+
+<script type="module" src="./js/app.js"></script>
+
+</body>
+</html>
